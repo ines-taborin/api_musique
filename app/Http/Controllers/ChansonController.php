@@ -55,7 +55,7 @@ class ChansonController extends Controller
             $chanson->save();
 
             // On retourne un message de confirmation
-            return response()->json(['message' => 'Lecture augmentée']);
+            return response()->json(['message' => 'Nombre de lectures augmenté']);
         }
     }
 }

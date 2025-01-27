@@ -87,6 +87,12 @@ class ListeController extends Controller
             'sauvegardes' => 'nullable|integer', // La sauvegardes est facultative et doit être un nombre
         ]);
 
+        // Vérifier si la validation a échoué
+        if ($donnees === null) {
+            return response()->json(['message' => 'Les données soumises ne sont pas valides.'], 405);
+        }
+
+
         // On modifie la liste en utilisant les données validées
         $liste->update([
             'titre' => $donnees['titre'],

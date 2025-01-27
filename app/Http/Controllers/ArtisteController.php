@@ -24,7 +24,7 @@ class ArtisteController extends Controller
         // On récupère l'artiste à partir de son ID
         $artiste = Artiste::where('id', $artisteId)->first();
 
-        // On retourne le's 'artiste au format JSON
+        // On retourne artistes au format JSON
         return response()->json($artiste);
     }
 }
